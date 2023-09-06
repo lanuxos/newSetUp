@@ -1,0 +1,2 @@
+# mac initial set up
+
