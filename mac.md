@@ -74,3 +74,25 @@ killall Finder
 
 # brewing
 `brew update && brew upgrade && brew cleanup && brew doctor`
+
+# iTerm2
+- oh-my-zsh installation
+```
+# installation via curl
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# installation via wget
+sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+
+```
+- oh-my-zsh plugins
+  - zsh-syntax-highlighting
+  `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
+  - ZSH-AutoSuggestion
+  `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
+  - 
+- oh-my-zsh theme
+  - powerlevel10k
+  `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k`
+    - configuration
+  `p10k configure`
+- .zsh
