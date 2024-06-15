@@ -96,3 +96,4 @@ sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/ins
     - configuration
   `p10k configure`
 - .zsh
+  [.zshrc](https://github.com/lanuxos/zshrc.git)
