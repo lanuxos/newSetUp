@@ -1,5 +1,33 @@
 # ubuntu app list
 # Terminal
+- summary
+```bash
+sudo apt update && apt upgrade -y
+# adding sources
+sudo add-apt-repository -y ppa:gerardpuig/ppa ppa:alexlarsson/flatpak ppa:christian-boxdoerfer/fsearch-stable ppa:linuxgndu/sqlitebrowser-testing
+echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" | sudo tee /etc/apt/sources.list.d/pgadmin4.list
+echo 'deb [signed-by=/usr/share/keyrings/sublimehq.gpg] https://download.sublimetext.com/ apt/stable/' | sudo tee /etc/apt/sources.list.d/sublime-text.list
+echo \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+sudo curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add
+curl -fsSL https://tailscale.com/install.sh | sh
+# update sources
+sudo apt update
+# install
+sudo apt install synaptic ubuntu-restricted-extras ubuntu-restricted-addons gnome-tweaks gnome-shell-extensions gnome-sushi ubuntu-cleaner gnome-software-plugin-flatpak wine-stable net-tools cpu-x curl git fsearch nodejs ca-certificates darktable golang-go gimp inkscape libreoffice openshot-qt postgresql postgresql-contrib pgadmin4 sqlitebrowser sublime-text transmission vlc
+sudo wget -O- https://download.sublimetext.com/sublimehq-pub.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/sublimehq.gpg
+sudo apt install flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
+# clean
+sudo apt autoclean clean autoremove
+```
 - update && upgrade
 ```bash
 sudo apt update && apt upgrade -y
@@ -75,17 +103,14 @@ sudo add-apt-repository ppa:christian-boxdoerfer/fsearch-stable
 sudo apt update
 sudo apt install fsearch
 ```
-
 - install tailscale
 ```bash
 curl -fsSL https://tailscale.com/install.sh | sh
 ```
-
 - install nodejs
 ```bash
 sudo apt install nodejs
 ```
-
 - install docker
 ```bash
 # Add Docker's official GPG key:
@@ -102,42 +127,34 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 ```
-
 - Darktable
 ```bash
 sudo apt install darktable
 ```
-
 - golang
 ```bash
 sudo apt install golang-go
 ```
-
 - install GIMP
 ```bash
 sudo apt install gimp
 ```
-
 - InkScape
 ```bash
 sudo apt install inkscape
 ```
-
 - LibreOffice
 ```bash
 sudo apt install libreoffice
 ```
-
 - OpenShot
 ```bash
 sudo apt install openshot-qt
 ```
-
 - PostgreSQL
 ```bash
 sudo apt install postgresql postgresql-contrib
 ```
-
 - pgAdmin4
 ```bash
 sudo curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add
@@ -145,14 +162,12 @@ echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs)
 sudo apt update
 sudo apt install pgadmin4
 ```
-
 - sqlitebrowser
 ```bash
 sudo add-apt-repository -y ppa:linuxgndu/sqlitebrowser-testing
 sudo apt update
 sudo apt install sqlitebrowser
 ```
-
 - sublimetext3
 ```bash
 sudo wget -O- https://download.sublimetext.com/sublimehq-pub.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/sublimehq.gpg
@@ -160,17 +175,14 @@ echo 'deb [signed-by=/usr/share/keyrings/sublimehq.gpg] https://download.sublime
 sudo apt update
 sudo apt install sublime-text
 ```
-
 - transmission
 ```bash
 sudo apt install transmission
 ```
-
 - vlc
 ```bash
 sudo apt install vlc
 ```
-
 - clean system
 ```bash
 sudo apt autoclean
