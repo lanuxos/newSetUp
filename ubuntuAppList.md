@@ -102,12 +102,100 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 ```
+
+- Darktable
+```bash
+sudo apt install darktable
+```
+
+- golang
+```bash
+sudo apt install golang-go
+```
+
+- install GIMP
+```bash
+sudo apt install gimp
+```
+
+- InkScape
+```bash
+sudo apt install inkscape
+```
+
+- LibreOffice
+```bash
+sudo apt install libreoffice
+```
+
+- OpenShot
+```bash
+sudo apt install openshot-qt
+```
+
+- PostgreSQL
+```bash
+sudo apt install postgresql postgresql-contrib
+```
+
+- pgAdmin4
+```bash
+sudo curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add
+echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" | sudo tee /etc/apt/sources.list.d/pgadmin4.list
+sudo apt update
+sudo apt install pgadmin4
+```
+
+- sqlitebrowser
+```bash
+sudo add-apt-repository -y ppa:linuxgndu/sqlitebrowser-testing
+sudo apt update
+sudo apt install sqlitebrowser
+```
+
+- sublimetext3
+```bash
+sudo wget -O- https://download.sublimetext.com/sublimehq-pub.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/sublimehq.gpg
+echo 'deb [signed-by=/usr/share/keyrings/sublimehq.gpg] https://download.sublimetext.com/ apt/stable/' | sudo tee /etc/apt/sources.list.d/sublime-text.list
+sudo apt update
+sudo apt install sublime-text
+```
+
+- transmission
+```bash
+sudo apt install transmission
+```
+
+- vlc
+```bash
+sudo apt install vlc
+```
+
 - clean system
 ```bash
 sudo apt autoclean
 sudo apt autoremove
 ```
-# App Center [Snap]
+
+# .deb
+- [anydesk](https://anydesk.com/en/downloads/linux#linux-downloads)
+- [docker](https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-linux-amd64)
+- [Google Chrome](https://www.google.com/chrome/)
+- [filezilla](https://dl4.cdn.filezilla-project.org/client/FileZilla_3.67.1_x86_64-linux-gnu.tar.xz?h=MpxUROlEq0OveKEpiSqIJw&x=1728384983)
+- [FreeFileSync](https://freefilesync.org/download/FreeFileSync_13.7_Linux.tar.gz)
+- [Master PDF Editor](https://code-industry.net/public/master-pdf-editor-5.9.85-qt5.x86_64.deb)
+- [teamviewer](https://dl.teamviewer.com/download/linux/version_15x/teamviewer_15.58.4_amd64.deb?ref=https%3A%2F%2Fwww.teamviewer.com%2Fen%2Fdownload%2Flinux%2F)
+- [virtualbox](https://download.virtualbox.org/virtualbox/7.1.2/virtualbox-7.1_7.1.2-164945~Ubuntu~noble_amd64.deb)
+- [vscode](https://vscode.download.prss.microsoft.com/dbazure/download/stable/d78a74bcdfad14d5d3b1b782f87255d802b57511/code_1.94.0-1727878498_amd64.deb)
+
+# Gnome Extensions
+- GSConnect
+- Clipboard Indicator
+- Coverflow Alt-Tab
+- Shutdown Timer
+- Transparent Top Bar
+
+# App Center [Alternative Snap install]
 - cpu-x
 - Darktable
 - firefox
@@ -125,22 +213,5 @@ sudo apt autoremove
 - transmission
 - vlc
 - vscode
-
-# .deb
-- [anydesk](https://anydesk.com/en/downloads/linux#linux-downloads)
-- [docker](https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-linux-amd64)
-- [Google Chrome](https://www.google.com/chrome/)
-- [filezilla](https://dl4.cdn.filezilla-project.org/client/FileZilla_3.67.1_x86_64-linux-gnu.tar.xz?h=MpxUROlEq0OveKEpiSqIJw&x=1728384983)
-- [FreeFileSync](https://freefilesync.org/download/FreeFileSync_13.7_Linux.tar.gz)
-- [teamviewer](https://dl.teamviewer.com/download/linux/version_15x/teamviewer_15.58.4_amd64.deb?ref=https%3A%2F%2Fwww.teamviewer.com%2Fen%2Fdownload%2Flinux%2F)
-- [virtualbox](https://download.virtualbox.org/virtualbox/7.1.2/virtualbox-7.1_7.1.2-164945~Ubuntu~noble_amd64.deb)
-- [vscode](https://vscode.download.prss.microsoft.com/dbazure/download/stable/d78a74bcdfad14d5d3b1b782f87255d802b57511/code_1.94.0-1727878498_amd64.deb)
-
-# Gnome Extensions
-- GSConnect
-- Clipboard Indicator
-- Coverflow Alt-Tab
-- Shutdown Timer
-- Transparent Top Bar
 
 # Flatpak
