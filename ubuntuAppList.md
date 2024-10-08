@@ -134,6 +134,7 @@ sudo apt autoremove
 - [FreeFileSync](https://freefilesync.org/download/FreeFileSync_13.7_Linux.tar.gz)
 - [teamviewer](https://dl.teamviewer.com/download/linux/version_15x/teamviewer_15.58.4_amd64.deb?ref=https%3A%2F%2Fwww.teamviewer.com%2Fen%2Fdownload%2Flinux%2F)
 - [virtualbox](https://download.virtualbox.org/virtualbox/7.1.2/virtualbox-7.1_7.1.2-164945~Ubuntu~noble_amd64.deb)
+- [vscode](https://vscode.download.prss.microsoft.com/dbazure/download/stable/d78a74bcdfad14d5d3b1b782f87255d802b57511/code_1.94.0-1727878498_amd64.deb)
 
 # Gnome Extensions
 - GSConnect
