@@ -84,6 +84,11 @@ wireshark
 - Trackpad
 - Sharing
 
+# Start mac in verbose mode
+```zsh
+sudo nvram boot-args="-v"
+```
+
 # show all files in Finder
 ```zsh
 defaults write com.apple.finder AppleShowAllFiles TRUE
