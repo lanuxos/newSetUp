@@ -47,3 +47,7 @@ foxit pdf
 FreeFileSync
 lao script
 
+# [Win11Debloat](https://github.com/Raphire/Win11Debloat.git)
+```powershell
+& ([scriptblock]::Create((irm "https://win11debloat.raphi.re/"))) -RunDefaults -Silent
+```
