@@ -51,3 +51,8 @@ lao script
 ```powershell
 & ([scriptblock]::Create((irm "https://win11debloat.raphi.re/"))) -RunDefaults -Silent
 ```
+
+# [winutil](https://github.com/ChrisTitusTech/winutil)
+```powershell
+irm "https://christitus.com/win" | iex
+```
