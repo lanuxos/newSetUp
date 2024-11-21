@@ -9,7 +9,7 @@ choco install revo-uninstall 7zip.install firefox foobar2000 googlechrome sumatr
 ```
 
 ```powershell
-choco install cpu-z.install crystaldiskinfo curl docker-desktop everything ffmpeg filezilla git-fork git.install golang googledrive greenshot io-unlocker k-litecodecpackfull launchy lockhunter microsoft-windows-terminal nodejs.install notepadplusplus ntop.portable onedrive pgAdmin4 postman putty.install python qbittorent rufus sqlitebrowser sublimetext3 tailscale telegram teracopy virtualbox visualstudio2022community vscode windirstat wsl -y
+choco install cpu-z.install crystaldiskinfo curl docker-desktop everything ffmpeg filezilla git-fork git.install golang googledrive greenshot io-unlocker kdeconnect-kde k-litecodecpackfull launchy lockhunter microsoft-windows-terminal nodejs.install notepadplusplus ntop.portable onedrive pgAdmin4 postman powertoys putty.install python qbittorent rufus sqlitebrowser sublimetext3 tailscale telegram teracopy virtualbox visualstudio2022community vscode windirstat wsl -y
 ```
 
 # choco alternative basic packages
