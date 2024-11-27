@@ -5,7 +5,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 ```
 # choco basic packages
 ```powershell
-choco install revo-uninstall 7zip.install firefox foobar2000 googlechrome sumatrapdf.install teamviewer vlc wechat whatsapp winrar -y
+choco install revo-uninstaller 7zip.install firefox foobar2000 googlechrome sumatrapdf.install teamviewer vlc wechat whatsapp winrar -y
 ```
 
 ```powershell
