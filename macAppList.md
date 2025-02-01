@@ -52,6 +52,7 @@ brew install --cask alfred
 brew install --cask android-file-transfer
 brew install --cask android-studio
 brew install --cask anydesk
+brew install --cask appcleaner
 brew install --cask authy
 brew install --cask avast-security
 brew install --cask cheatsheet
