@@ -52,3 +52,59 @@ flatpak install flathub org.filezillaproject.Filezilla com.getpostman.Postman or
 
 flatpak run org.chromium.Chromium
 ```
+# zsh
+```
+apt install zsh -y
+zsh
+```
+## change default shell to zsh [logout and re-login]
+`chsh -s $(which zsh)`
+## install oh-my-zsh
+`sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+## plugins
+```
+conda
+copybuffer
+copyfile
+copypath
+dirhistory
+dotenv
+flutter
+gcloud
+git
+golang
+history
+httpie
+jira
+laravel
+nmap
+node
+nvm
+pep8
+pip
+python
+ssh
+sublime
+sudo
+thefuck
+ufw
+virtualenv
+vscode
+web-search
+colored-man-pages
+colorize
+```
+## zsh-autosuggestions
+`git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
+
+## zsh-syntax-highlighting
+`git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
+
+## theme
+[powerlevel10k/powerlevel10k](https://github.com/romkatv/powerlevel10k)
+`git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"`
+
+`ZSH_THEME="powerlevel10k/powerlevel10k"`
+
+## restart zsh
+`exec zsh`
