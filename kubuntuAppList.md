@@ -1,4 +1,4 @@
-# Kubunto New Setup
+# Kubuntu New Setup
 # wifi not working
 ## probe with driver iwlwifi failed with error -110
 ```
