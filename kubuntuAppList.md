@@ -35,7 +35,7 @@ apt autoremove
 ```
 # apt
 ```
-apt install synaptic curl golang-go htop net-tools nodejs transmission vlc
+apt install synaptic curl golang-go htop net-tools nodejs python3-pip python3-setuptools python3-venv thefuck transmission vlc
 
 apt install darktable gimp inkscape libreoffice openshot-qt postgresql postgresql-contrib
 ```
@@ -76,6 +76,7 @@ golang
 history
 httpie
 jira
+jsontools
 laravel
 nmap
 node
