@@ -46,11 +46,22 @@ apt install darktable gimp inkscape libreoffice openshot-qt postgresql postgresq
 sudo apt install flatpak kde-config-flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-flatpak install flathub com.anydesk.Anydesk org.chromium.Chromium net.code_industry.MasterPDFEditor org.mozilla.firefox com.sublimetext.three org.videolan.VLC com.visualstudio.code
+flatpak install flathub com.anydesk.Anydesk org.chromium.Chromium net.code_industry.MasterPDFEditor org.mozilla.firefox com.sublimetext.three org.videolan.VLC
 
 flatpak install flathub org.filezillaproject.Filezilla com.getpostman.Postman org.pgadmin.pgadmin4 tech.feliciano.pocket-casts org.sqlitebrowser.sqlitebrowser
 
 flatpak run org.chromium.Chromium
+```
+# [code](https://code.visualstudio.com/docs/setup/linux)
+```
+sudo apt update
+sudo apt install wget gpg
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
+echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" |sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null
+rm -f packages.microsoft.gpg
+sudo apt install apt-transport-https
+sudo apt install code
 ```
 # zsh
 ```
