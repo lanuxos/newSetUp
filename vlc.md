@@ -21,6 +21,14 @@
 - Cycle subtitle track          S
 - Cycle source aspect ratio     x
 
+## enable Media Library Directory
+- Preferences [CTRL+P]
+- All
+- Playlist
+- Use media library
+- Save
+- Media Library > Right click > Add Directory...
+
 ## auto launch command
 - create start-up command with below command
 `vlc -f VIDEO_PATH`
