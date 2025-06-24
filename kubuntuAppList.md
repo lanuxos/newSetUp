@@ -153,3 +153,9 @@ curl -O https://repo.anaconda.com/archive/Anaconda3-2024.10-1-Linux-x86_64.sh
 bash ~/Anaconda3-2024.10-1-Linux-x86_64.sh
 source ~/.zshrc
 ```
+
+# [TeamViewer](https://download.teamviewer.com/download/linux/teamviewer_amd64.deb)
+```
+sudo apt install gdebi                  # sudo apt install libminizip1 gdebi-core
+sudo apt install ./TEAMVIEWER...deb     # sudo gdebi-core ./TEAMVIEWER...deb
+```
