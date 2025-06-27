@@ -159,3 +159,11 @@ source ~/.zshrc
 sudo apt install gdebi                  # sudo apt install libminizip1 gdebi-core
 sudo apt install ./TEAMVIEWER...deb     # sudo gdebi-core ./TEAMVIEWER...deb
 ```
+
+# grub-customizer
+```
+sudo add-apt-repository ppa:danielrichter2007/grub-customizer 
+sudo apt update
+sudo apt install grub-customizer
+```
+
