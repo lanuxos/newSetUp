@@ -171,5 +171,6 @@ sudo apt install grub-customizer
 ```
 sudo wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -O /usr/local/sbin/yt-dlp
 sudo chmod a+rx /usr/local/sbin/yt-dlp
+sudo apt install ffmpeg
 ```
 
