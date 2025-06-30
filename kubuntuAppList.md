@@ -174,3 +174,30 @@ sudo chmod a+rx /usr/local/sbin/yt-dlp
 sudo apt install ffmpeg
 ```
 
+# [Node.js](https://nodejs.org/en/download)
+```
+# Download and install nvm:
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+
+# in lieu of restarting the shell
+\. "$HOME/.nvm/nvm.sh"
+
+# Download and install Node.js:
+nvm install 22
+
+# Verify the Node.js version:
+node -v # Should print "v22.17.0".
+nvm current # Should print "v22.17.0".
+
+# Verify npm version:
+npm -v # Should print "10.9.2".
+```
+
+# [Gemini CLI](https://github.com/google-gemini/gemini-cli)
+## run CLI 
+`npx https://github.com/google-gemini/gemini-cli`
+## or just install it via
+```
+npm install -g @google-gemini/gemini-cli
+gemini
+```
