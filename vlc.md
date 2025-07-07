@@ -32,7 +32,8 @@
 ## auto launch command
 - create start-up command with below command
 `vlc -f VIDEO_PATH`
+`vlc /home/USER/Videos/VIDEO.mp4 -f`
 
 ## auto launch command at specified display [no test yet!]
-```--qt-fullscreen-screennumber=0`    # 0 is 1st display
+`vlc VIDEO_PATH --qt-fullscreen-screennumber=0  # 0 mean 1st display`
 - Preferences [CTRL+P] > Video > Fullscreen Video Device
