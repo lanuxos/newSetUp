@@ -59,3 +59,15 @@ irm "https://christitus.com/win" | iex
 
 # Make Windows Use UTC to correct dual-booting Windows and Linux incorrect time
 `reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /t REG_DWORD /d 1 /f`
+
+# Auto Login
+```
+netplwiz
+# un-check Users must enter a user name and password to use this computer
+```
+
+# Restore a Missing "Users Must Enter a User Name and Password" Option in Windows
+```
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PasswordLess
+# DevicePasswordLessBuildVersion => 0
+```
