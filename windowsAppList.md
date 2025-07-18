@@ -71,3 +71,72 @@ netplwiz
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PasswordLess
 # DevicePasswordLessBuildVersion => 0
 ```
+
+# Re-locate user folders [re-check Downloads folder, last time it does not move correctly]
+```powershell
+# Move-UserFolders.ps1
+# Run as current user (ideally with Admin rights)
+
+# Map of Known Folders and their registry names
+$folderMap = @{
+    "Desktop"     = "D:\Desktop"
+    "Downloads"   = "D:\Downloads"
+    "Personal"    = "D:\Documents"    # 'Personal' = Documents
+    "My Pictures" = "D:\Pictures"
+    "My Music"    = "D:\Music"
+    "My Video"    = "D:\Videos"
+}
+
+Write-Host "[INFO] Starting user folder relocation..." -ForegroundColor Cyan
+
+foreach ($folder in $folderMap.Keys) {
+    $newPath = $folderMap[$folder]
+
+    # Create folder if not exists
+    if (-Not (Test-Path $newPath)) {
+        Write-Host "Creating $newPath..."
+        New-Item -ItemType Directory -Path $newPath -Force | Out-Null
+    }
+
+    # Set the path in both registry locations for consistency
+    $userShellKey = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders"
+    $shellKey     = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders"
+
+    # Check if the path is already correct (to avoid unnecessary changes)
+    $currentUserPath = Get-ItemProperty -Path $userShellKey -Name $folder
+    if ($currentUserPath.$folder -ne $newPath) {
+        Write-Host "[INFO] Updating $folder path to $newPath..."
+
+        # Update User Shell Folders and Shell Folders registry keys
+        Set-ItemProperty -Path $userShellKey -Name $folder -Value $newPath
+        Set-ItemProperty -Path $shellKey -Name $folder -Value $newPath
+    }
+    else {
+        Write-Host "[INFO] $folder is already set to $newPath." -ForegroundColor Green
+    }
+
+    # Special handling for Downloads folder using GUID (Known Folder API)
+    if ($folder -eq "Downloads") {
+        Write-Host "[INFO] Attempting to move Downloads folder..."
+
+        # Define GUID for Downloads Known Folder
+        $downloadsGuid = "{374DE290-123F-4565-9164-39C4925E467B}"
+
+        # Set the Downloads Known Folder to D:\Downloads
+        $downloadsPath = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\KnownFolders"
+        Set-ItemProperty -Path $downloadsPath -Name $downloadsGuid -Value $newPath
+
+        Write-Host "[INFO] Downloads folder moved to D:\Downloads." -ForegroundColor Green
+    }
+}
+
+Write-Host "`n[COMPLETE] User folders redirected. You may need to restart Explorer or log off/log in." -ForegroundColor Yellow
+
+# Restart Explorer after waiting 30 seconds
+Write-Host "Stopping Explorer..." -ForegroundColor Yellow
+Stop-Process -Name explorer -Force
+Write-Host "Waiting for 30 seconds..."
+Start-Sleep -Seconds 30
+Start-Process explorer.exe
+Write-Host "Explorer restarted." -ForegroundColor Green
+```
