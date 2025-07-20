@@ -21,3 +21,20 @@ sudo apt-get update
 `sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin`
 ## verify
 `sudo docker run hello-world`
+## manage docker as a non-root user [optional]
+```
+sudo groupadd docker
+sudo usermod -aG docker $USER
+# log-out and log back in
+docker run hello-world
+```
+## config docker to start on boot
+```
+sudo systemctl enable docker.service
+sudo systemctl enable containerd.service
+```
+## to disable auto start on boot
+```
+sudo systemctl disable docker.service
+sudo systemctl disable containerd.service
+```
