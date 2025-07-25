@@ -10,7 +10,7 @@ apt autoremove
 
 # apt
 ```
-apt install synaptic curl git golang-go htop net-tools nodejs python3-pip python3-setuptools python3-venv thefuck transmission vlc
+apt install synaptic curl catfish copyq git golang-go htop net-tools nodejs numlockx python3-pip python3-setuptools python3-venv stacer thefuck transmission vlc
 
 apt install darktable gimp inkscape libreoffice openshot-qt postgresql postgresql-contrib
 ```
@@ -169,3 +169,34 @@ npm -v # Should print "10.9.2".
 npm install -g @google-gemini/gemini-cli
 gemini
 ```
+
+# disable last-access-time on SSD
+```
+sudo nano /etc/fstab
+# add 'noatime'
+# UUID=xxxx /               ext4    errors=remount-ro 0
+# UUID=xxxx /               ext4    noatime,errors=remount-ro 0
+systemctl status fstrim
+# if not, activate timer to schedule execute
+sudo systemctl enable fstrim.timer && sudo systemctl start fstrim.timer
+```
+
+# reduce swap auto launch, use swap when ram used up to 80% [default 40%]
+```
+sudo xed /etc/sysctl.config
+# go to last line and add
+# vm.swappiness=20
+```
+
+# ulauncher
+`sudo add-apt-repository universe -y && sudo add-apt-repository ppa:agornostal/ulauncher -y && sudo apt update && sudo apt install ulauncher`
+
+# [Microsoft Fonts](http://ftp.us.debian.org/debian/pool/contrib/m/msttcorefonts/ttf-mscorefonts-installer_3.8.1_all.deb)
+```
+sudo apt install ./ttf-mscorefonts-installer_3.8.1_all.deb
+sudo cp -v -r /usr/share/fonts/truetype/msttcorefonts /usr/local/share/fonts/msttcorefonts2
+sudo apt-get purge ttf-mscorefonts-installer
+sudo dpkg-reconfigure fontconfig
+
+```
+
