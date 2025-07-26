@@ -38,6 +38,8 @@ rm -f packages.microsoft.gpg
 sudo apt install apt-transport-https
 sudo apt install code
 ```
+- fixed column select behavior
+  - Settings > Window > Behavior > Special key to move and resize windows [<Alt> => <Super>]
 
 # zsh
 ```
